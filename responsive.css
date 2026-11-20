@@ -1,0 +1,47 @@
+@media (max-width: 760px) {
+  .page { width: min(100% - 26px, 480px); padding: 30px 0 20px; }
+  .heading { margin-bottom: 20px; }
+  .auth-card {
+    width: 100%;
+    height: auto;
+    min-height: 540px;
+    overflow: hidden;
+  }
+  .form-side { position: relative; min-height: 540px; }
+  .auth-form {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: auto;
+    min-height: 540px;
+    padding: 34px 8%;
+    justify-content: center;
+    background: linear-gradient(145deg, rgba(12,44,80,.98), rgba(7,23,47,.98));
+  }
+  .login-form { left: 0; right: 0; }
+  .signup-form { left: 0; right: 0; }
+  .overlay-window { display: none; }
+  .mobile-switch { display: block; }
+  .auth-card.is-signup .signup-form { transform: translateX(0); }
+  .auth-card.is-signup .login-form { transform: translateX(-12px); }
+  .page-foot { text-align: center; }
+}
+@media (max-width: 420px) {
+  .page { width: calc(100% - 20px); }
+  .heading h1 { font-size: 1.35rem; }
+  .subtitle { font-size: .78rem; }
+  .auth-card, .form-side, .auth-form { min-height: 555px; }
+  .auth-form { padding-inline: 7%; }
+  .auth-form h2 { font-size: 1.45rem; }
+}
+@media (min-width: 761px) and (max-width: 940px) {
+  .auth-card { height: 520px; }
+  .auth-form { padding-inline: 4%; }
+  .overlay-panel { padding-inline: 6%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+}
